@@ -1,0 +1,38 @@
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    position: absolute;
+    top: 35%;
+    display: block;
+    width: 13px;
+    height: 23px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev
+{
+    left: -25px;
+    background-image: url("../images/prev.png");
+
+}
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+
+.slick-next
+{
+    right: -25px;
+    background-image: url("../images/next.png");
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -25px;
+}
