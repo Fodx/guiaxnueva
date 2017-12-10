@@ -49,15 +49,6 @@ h4 {font-family: 'Oswald', sans-serif; color:#00608b; font-size: 19px; margin-to
 .right15 {margin-right:15px;}
 .right20 {margin-right:20px;}
 
-/*POR LAS DUDAS:
-.margin-bondi {margin-bottom:35px;}
-.margin-separa {margin-right:15px;}
-.margin-separa2 {margin-right:20px;}
-.margin-guardar {margin-right:15px;}
-.separa-dias {margin-right:15px;}*/
-
-/*HEADER*/
-
 	/*HEADER-PRINCIPAL*/
 
 .imagen-header {background: url(../images/header.jpg) no-repeat; background-size:cover;}
@@ -70,9 +61,10 @@ header span {color:#ffa400; font-weight: bold;}
 
 		/*NAV-PRINCIPAL*/
 
-.nav-principal {padding-top: 35px;}
+.nav-principal {padding-top: 35px; overflow: hidden;}
 .nav-principal a {height: 32px; line-height: 32px; float: left; margin-right: 24px; text-shadow: 2px 2px 2px #222;}
 .borde-boton {border: #FaFaFa solid 1px; padding: 0 14px;}
+.publicar { float: left; }
 .acceso {float: right; margin-right: -24px;}
 .acceso a {text-shadow: 2px 2px 2px #222;}
 
@@ -96,6 +88,26 @@ header span {color:#ffa400; font-weight: bold;}
 .imagen-derecha {background: url(../images/me-gusta.png) no-repeat; background-position: 10px 7px;}
 .imagen-izquierda {background: url(../images/compartir.png) no-repeat; background-position: 10px center;}
 
+.foto-comercio-home {
+	position: absolute;
+  right: 20px;
+  top: 612px;
+  color: #fff;
+  text-shadow: 2px 2px 2px #222;
+}
+.foto-comercio-home a:hover {
+	color: #fff;
+}
+.foto-comercio-home a:hover img{
+	border-color: #ffa400;
+}
+.foto-comercio-home img {
+	height: 40px;
+	width: 40px;
+	display: inline-block;
+	margin-left: 7px;
+	border: 2px solid #fff;
+}
 
 		/*BUSCADOR HOME*/
 
@@ -527,29 +539,38 @@ input[type="text"]:focus, input[type="email"]:focus
 
 .mensajes-inicio {width:23px; height:23px; background-color:#ffa400; border-radius:50%; color:#000 !important; text-align:center; text-shadow:none !important; position:absolute; top:-12px; left:30px;}
 
+.sesion { margin: 4px 0 0 20px; display: inline-block; }
 
 /*NAVEGA-USUARIO*/
 
-.navega-usuario {margin-bottom:40px;}
-.navega-usuario li {float:left;}
+.navega-usuario {margin: 50px 0 40px 0;}
+.navega-usuario li {float:left; cursor: pointer;}
 .navega-usuario li:hover {background-color:#fafafa; color:#00608b;}
 .boton-usuario {display:block; height:85px; width:160px; color:#6daedb; background-color:#efefef; text-align:center; padding-top:20px; box-sizing: border-box; font-weight:bold;}
 .navega-usuario:hover {background-color:#fafafa; color:#00608b;}
 
-.mensajes {width:20px; height:20px; background-color:#ffa400; border-radius:50%; color:#000; margin:0 auto 13px; line-height:23px;}
-.usuario-clickeado {background-color:#fafafa; color:#00608b; height:85px; width:160px; text-align:center; padding-top:20px; box-sizing:border-box; font-weight:bold;}
+.mensajes {width:20px; height:20px; background-color:#ffa400; border-radius:50%; color:#000; margin:0 auto 13px; line-height:20px;}
+.boton-usuario.active {background-color:#fafafa; color:#00608b; height:85px; width:160px; text-align:center; padding-top:20px; box-sizing:border-box; font-weight:bold;}
 .sin-mensaje {padding-top:53px !important;}
 
 /*CONVERSACIONES*/
 
-.conversaciones {margin-bottom:20px; padding:20px 0 15px; border-bottom:1px solid #e3e3e3;}
-.bloque-desplegar {padding:15px; border-top:1px solid #e3e3e3;}
+.conversaciones {margin-bottom:20px; padding-bottom: 15px; border-bottom:1px solid #e3e3e3;}
 .top {margin-top:20px;} 
 .info-left {float:left; margin:7px 15px 0;}
 .info-left a {font-weight:normal;}
 
-.despliega {float:right; margin-top:20px;}
-.bloque-desplegado {padding:15px; background-color:#efefef;}
+.conversaciones .panel a[role="button"] {
+	overflow: hidden;
+	display: block;
+}
+.conversaciones .panel-collapse {
+	overflow: hidden;
+	padding-top: 20px;
+}
+.conversaciones .panel-group {
+	margin-top: 25px;
+} 
 
 .chat {padding:15px;}
 .chat span {font-weight:bold; color:#00608b;}
@@ -653,7 +674,7 @@ input[type="text"]:focus, input[type="email"]:focus
 .titulo-publicacion {font-size:24px; font-weight:bold; color:#424242; margin-top:-10px; font-family: 'Oswald', sans-serif;}
 .precio-publicacion {font-size:24px; font-weight:bold; color:#ffa400; margin:-10px 0 20px; font-family: 'Oswald', sans-serif;}
 
-.btn-publicacion {margin:15px 0 20px; float:right;}
+.btn-publicacion {margin:15px 0 20px; float:right; position: relative; z-index: 10}
 .btn-publicacion li {float:left; font-size:12px;}
 .btn-publicacion a {margin-left:15px; color:#00608b;}
 .btn-publicacion a:hover {color:#6daedb;}
@@ -695,6 +716,8 @@ input[type="text"]:focus, input[type="email"]:focus
 .bx-wrapper .bx-prev {left: 10px; background: url(../images/prev.png) no-repeat;}
 .bx-wrapper .bx-next {right: -10px; background: url(../images/next.png) no-repeat;}
 .bx-wrapper .bx-next:hover {right: -10px; background: url(../images/next.png) no-repeat;}
+.bx-wrapper .bx-next:hover, .bx-wrapper .bx-next:focus { background-position: inherit; }
+.bx-wrapper .bx-controls-direction a { z-index: 2 }
 
 /*SORTEO*/
 

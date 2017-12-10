@@ -18,9 +18,8 @@ $(document).ready( function() {
 	  $(".buscador-home input").addClass("no-radius");	
 	  return false;
 	});
-	/*$(document).on('click', '.dropdown-menu ul', function (e) {
- 		e.stopPropagation();
-	}); */
-
-
+	$(".boton-usuario").on("click", function () {
+		$(".boton-usuario").removeClass("active");
+		$(this).addClass("active");
+	});
 });
