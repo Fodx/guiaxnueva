@@ -1,4 +1,4 @@
-$(document).on('ready', function() {
+$(document).ready( function() {
   $(".regular").slick({
     dots: false,
     infinite: true,
@@ -17,6 +17,10 @@ $(document).on('ready', function() {
 	  $(".resultados-busqueda").removeClass("oculto");
 	  $(".buscador-home input").addClass("no-radius");	
 	  return false;
-	}); 
+	});
+	/*$(document).on('click', '.dropdown-menu ul', function (e) {
+ 		e.stopPropagation();
+	}); */
+
 
 });

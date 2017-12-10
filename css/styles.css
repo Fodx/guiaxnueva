@@ -18,7 +18,9 @@ a i {margin-right: 8px;}
 
 .button-outline {height: 40px; line-height: 40px; padding: 0 15px 10px; border: #00608b solid 1px; float: left; color: #00608b; background-color: transparent; font-weight:bold;}
 .button-outline:hover {border: #6daedb solid 1px; color:#6daedb;}
-
+.btn.active, .btn:active {
+	box-shadow: none;
+}
 .left {float:left;}
 .right {float:right;}
 .clear {clear: both;}
@@ -183,14 +185,17 @@ label:focus,
 .content-principal {width: 920px; margin: 0 auto; overflow: hidden;}
 .content-interno {width: 920px; margin: 0 auto; overflow: hidden;}
 
-.franja {background: url(../images/fondo-body.png) repeat-y;}
-.fondo {background-color:#FFF;}
+/*.franja {background: url(../images/fondo-body.png) repeat-y;}*/
+.fondo {background-color: #fff;}
 
-	/*ASIDE-LEFT*/
+/*ASIDE-LEFT*/
 
+.lista-rubros .dropdown {
+	overflow: hidden;
+}
 .lista-rubros ul {margin-top:10px; background-color: transparent;}
 .lista-rubros li {margin-bottom: 16px; color:#00608b;}
-.lista-rubros a {color: #00608b;}
+.lista-rubros a {color: #00608b; display: block;}
 .lista-rubros a:hover {color: #6daedb;}
 
 .clickeado {color:#6daedb !important;}
@@ -198,16 +203,41 @@ label:focus,
 
 .lista-clasificados {margin-top:10px;}
 .lista-clasificados li {margin-bottom: 16px; color:#424242;}
-.lista-clasificados a {color: #777777;}
+.lista-clasificados a {color: #777777; display: block;}
 .lista-clasificados a:hover {color: #000;}
 .lista-clasificados p {color:#424242; font-weight: bold; font-size:25px;}
 
-.btn {color:#6daedb; margin:0; font-weight: bold; font-size:25px; padding: 0; background-color: transparent;}
-.dropdown-toggle:hover {color:#6daedb;}
-.dropdown-toggle:focus {color:#6daedb;}
+.panel {
+	background-color: transparent;
+  box-shadow: none;
+}
+.panel a {
+	width: 100%;
+	text-align: left;
+}
 
-.dropdown-menu {position:relative; box-shadow:none; border:none; background-color: transparent; z-index:0;}
+.panel h4 a { font-family: 'Raleway', sans-serif; color:#6daedb; margin:0; font-weight: bold; font-size:25px; padding: 0; background-color: transparent;}
+.lista-clasificados h4 a { color: #424242;}
 
+.panel h4:hover {color:#6daedb;}
+.panel h4:focus {color:#6daedb;}
+
+.panel h4 i {
+	position: relative;
+	top: 3px;
+	float: right;
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-ms-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+.collapsed i {
+  -webkit-transform: rotate(180deg); /* Safari 3-8 */
+  -mz-transform: rotate(180deg); /* Safari 3-8 */
+	-ms-transform: rotate(180deg); /* IE 9 */
+	transform: rotate(180deg);
+} 
 
 	/*CONTENT-CENTER*/
 
@@ -597,7 +627,7 @@ input[type="text"]:focus, input[type="email"]:focus
 }
 
 
-.tags {font-size:10px; margin-bottom:25px;}
+.mini-aclaracion {font-size:12px; margin-bottom:25px;}
 
 /*PREGUNTAS*/
 
