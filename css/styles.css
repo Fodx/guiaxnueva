@@ -887,14 +887,20 @@ input[type="text"]:focus, input[type="email"]:focus
 }
 
 .horoscopo {width: 980px; margin: 0 auto; padding:35px 0 55px;}
-.header-horoscopo {margin-bottom:100px;}
+.header-horoscopo {margin-bottom: 50px;}
 .header-horoscopo img {position:relative; bottom:12px; margin-right:30px;}
 .titulo-horoscopo {font-family: 'Oswald', sans-serif; color:#ffa400; font-size:30px; letter-spacing:9px; font-weight:normal; display:inline-block; margin:0;}
 
+.signo:hover {
+	fill: #dd9d30;
+	cursor: pointer;
+	stroke: #fff!important;
+}
+
 .info-signo {width:400px; color:#fafafa; float:right;}
 .info-signo span {color:#ffa400;}
-.signo {font-family: 'Oswald', sans-serif; color:#ffa400; font-size:35px; letter-spacing:9px; text-transform:uppercase; margin-bottom:30px;}
-.fecha-signo {color:#777777;}
+.nombre-signo {font-family: 'Oswald', sans-serif; color:#ffa400; font-size:35px; letter-spacing:9px; text-transform:uppercase; margin-bottom:5px;}
+.fecha-signo {color:#aaa; margin-bottom: 30px;}
 
 .redes-signo a {margin-top:40px; height:37px; line-height:37px; padding: 0 10px 0 42px; border: #FaFaFa solid 1px; float: left; font-size:13px; color:#FaFaFa;}
 .redes-signo a:hover {background-color:#ffa400;}
